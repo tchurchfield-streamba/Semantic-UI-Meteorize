@@ -3,17 +3,17 @@ Semantic UI Meteorize
 
 This tool generates 2 meteor packages based on Semantic UI.
 
-- [Semantic-UI-Meteor-Data](https://github.com/Semantic-Org/Semantic-UI-Meteor-Data)
-- [Semantic-UI-Meteor](https://github.com/Semantic-Org/Semantic-UI-Meteor)
+- [Semantic-UI-Meteor-Data](https://github.com/tchurchfield-streamba/Semantic-UI-Meteor-Data)
+- [Semantic-UI-Meteor](https://github.com/tchurchfield-streamba/Semantic-UI-Meteor)
 
 Pre-requisites
 ---------------
 
-- Docker
-- Write access to Semantic-UI-Meteor-Data and Semantic-UI-Meteor
+- Docker (must be set up and using WSL2)
+- Write access to the forks of Semantic-UI-Meteor-Data and Semantic-UI-Meteor
 - Publish access to Atmosphere for the packages
-  - <https://atmospherejs.com/semantic/ui>
-  - <https://atmospherejs.com/semantic/ui-data>
+  - <https://atmospherejs.com/timchurchfield/semantic-ui>
+  - <https://atmospherejs.com/timchurchfield/semantic-ui-data>
 
 Versioning
 ----------
@@ -43,11 +43,9 @@ $ make generate
 
 # do some testing!!!
 
-# publish semantic:ui-data
-$ make publish-ui-data
-# publish semantic:ui
-$ make publish-ui
-# clean
+# publish (no longer in Docker)
+$ make publish-windows
+# clean (in Docker)
 $ make clean
 ```
 
