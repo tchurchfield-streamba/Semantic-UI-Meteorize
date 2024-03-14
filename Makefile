@@ -7,8 +7,12 @@ docker-build:
 .PHONY: docker-build
 
 docker-shell:
-	docker run --rm -it -v $(shell cd):/app -v ~/.ssh:/home/node/.ssh:ro $(IMAGE_NAME) bash -c ". env.sh; bash"
+	docker run --rm -it -v $(PWD):/app -v ~/.ssh:/home/node/.ssh:ro $(IMAGE_NAME) bash -c ". env.sh; bash"
 .PHONY: docker-shell
+
+docker-shell-windows:
+	docker run --rm -it -v $(shell cd):/app -v ~/.ssh:/home/node/.ssh:ro $(IMAGE_NAME) bash -c ". env.sh; bash"
+.PHONY: docker-shell-windows
 
 deps:
 	npm install

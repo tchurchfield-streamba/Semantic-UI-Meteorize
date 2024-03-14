@@ -35,7 +35,7 @@ $ cp env.template.sh env.sh
 # edit env.sh properly
 $ vim env.sh
 # shell docker container
-$ make docker-shell
+$ make docker-shell-windows
 # dependencies
 $ make deps
 # generate
