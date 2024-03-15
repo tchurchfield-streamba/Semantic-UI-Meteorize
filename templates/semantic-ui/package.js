@@ -5,7 +5,7 @@
 Package.describe({
   name: '<%= info.pkg.name %>',
   version: '<%= info.pkg.version %>',
-  summary: 'Official Semantic UI Integration for Meteor',
+  summary: 'Fork of Official Semantic UI Integration for Meteor',
   git: '<%= info.pkg.git %>',
   documentation: 'README.md'
 });

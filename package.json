@@ -1,6 +1,6 @@
 {
   "name": "meteorize-semantic-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Makes Semantic UI as a Meteor Package.",
   "main": "gulpfile.js",
   "dependencies": {
