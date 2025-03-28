@@ -10,6 +10,10 @@ docker-shell:
 	docker run --rm -it -v $(PWD):/app -v ~/.ssh:/home/node/.ssh:ro $(IMAGE_NAME) bash -c ". env.sh; bash"
 .PHONY: docker-shell
 
+docker-shell-windows:
+	docker run --rm -it -v $(shell cd):/app -v ~/.ssh:/home/node/.ssh:ro $(IMAGE_NAME) bash -c ". env.sh; bash"
+.PHONY: docker-shell-windows
+
 deps:
 	npm install
 .PHONY: deps
@@ -21,9 +25,20 @@ generate:
 publish: publish-ui-data publish-ui
 .PHONY: publish
 
+publish-windows: publish-ui-data-windows publish-ui-windows
+.PHONY: publish-windows
+
+publish-ui-data-windows:
+	pwsh -Command "& './scripts/publish.ps1' -PACKAGE_PATH $(SEMANTIC_UI_DATA_PACKAGE)"
+.PHONY: publish-ui-data-windows
+
 publish-ui-data:
 	PACKAGE_PATH=$(SEMANTIC_UI_DATA_PACKAGE) ./scripts/publish.sh
 .PHONY: publish-ui-data
+
+publish-ui-windows:
+	pwsh -Command "& './scripts/publish.ps1' -PACKAGE_PATH $(SEMANTIC_UI_PACKAGE)"
+.PHONY: publish-ui-windows
 
 publish-ui:
 	PACKAGE_PATH=$(SEMANTIC_UI_PACKAGE) ./scripts/publish.sh

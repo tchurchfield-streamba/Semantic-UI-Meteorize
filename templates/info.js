@@ -1,19 +1,19 @@
 var info = {};
 
 info.pkg = {
-  name: 'semantic:ui',
+  name: 'timchurchfield:semantic-ui',
   version: '<%= pkgVersion %>',
   base: './dist/semantic-ui',
-  git: 'git@github.com:Semantic-Org/Semantic-UI-Meteor.git'
+  git: 'https://github.com/tchurchfield-streamba/Semantic-UI-Meteor.git'
 };
 
 // If changing version, need to update info.pkg.version because it depends on this version
 info.pkgData = {
-  name: 'semantic:ui-data',
+  name: 'timchurchfield:semantic-ui-data',
   version: '<%= pkgDataVersion %>',
   base: './dist/semantic-ui-data',
   lib: './dist/semantic-ui-data/lib',
-  git: 'git@github.com:Semantic-Org/Semantic-UI-Meteor-Data.git',
+  git: 'https://github.com/tchurchfield-streamba/Semantic-UI-Meteor-Data.git',
   semanticUi: './dist/semantic-ui-data/lib/semantic-ui'
 };
 
